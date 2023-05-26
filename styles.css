@@ -1,0 +1,44 @@
+.title {
+    text-align: center;
+    font-size: 4rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card {
+    border: 2px solid black;
+    width: 280px;
+    height: 400px;
+    font-size: 1.5rem;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 40px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+input {
+    height: 80px;
+    width: 80px;
+    font-size: 24px;
+    text-align: center;
+}
+
+button {
+    height: 40px;
+    background-color: lightskyblue;
+    border-radius: 5px;
+}
