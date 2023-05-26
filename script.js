@@ -35,11 +35,11 @@ formEl.addEventListener("submit", function (e) {
 function calculateFinalResult() {
   var traysInStore = answers.slice(0, 4);
   inStore = traysInStore.reduce((a, b) => a + b, 0) * 24;
-  console.log(inStore);
-  soFar = inStore + answers[4];
-  console.log(soFar);
-  var hoursOpen = 7 + new Date().getHours();
-  console.log("hours open: ", hoursOpen);
+  console.log("inStore should be 960 ", inStore);
+  soFar = inStore + answers[4]; // sold earlier
+  console.log("should equal 240 + 960 = 1200 ", soFar);
+  var hoursOpen = 7 + new Date().getHours(); // should equall hours since 7am
+  console.log("hours open since 7am: ", hoursOpen);
   var breadSalesPerHour = Math.floor(soFar / hoursOpen);
   eightPm = Math.floor(breadSalesPerHour * (20 - new Date().getHours()) * 0.08);
   console.log("8pm: ", eightPm);
