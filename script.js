@@ -59,10 +59,10 @@ function calculateFinalResult() {
   var finalResult = `
 Amount of sales in store: $${inStore}.
 Earlier sales + in-store: $${soFar}.
-Average of yesterday, and the last 2 ${daysOfTheWeek[new Date().getDay()]}s was $${threeWeekAverage}.
-Difference between 3 week average and sales so far is $${difference}.
+Average of yesterday, and the last 2 ${daysOfTheWeek[new Date().getDay()]}s was $${Math.floor(threeWeekAverage)}.
+Difference between 3 week average and sales so far is $${Math.floor(difference)}.
 Estimate trays to push: ${Math.floor(difference/24)} trays.
-Add 8% waste to today's total: $${todayPlusWaste}. 
+Add 8% waste to today's total: $${Math.floor(todayPlusWaste)}. 
 Estimate trays to push with waste: ${Math.floor(todayPlusWaste / 24)}.
 `;
   questionEl.textContent = finalResult;
